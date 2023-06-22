@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Home() {
   return (
     <div
@@ -13,13 +15,24 @@ export default function Home() {
     "
     >
       <div className="sm:mx-auto sm:m-full sm:max-w-md">
-        <image
+        <Image
           alt="logo"
           height="48"
           width="48"
           className="mx-auto w-auto"
           src="/images/messengerlogo.png"
         />
+        <h2
+          className="
+        mt-6
+        text-center
+        text-3l
+        font-bold
+        tracking-tight
+        text-gray-900"
+        >
+          Sign into your account
+        </h2>
       </div>
     </div>
   );
