@@ -1,5 +1,6 @@
 "use client";
 
+import Input from "@/app/components/input";
 import { useCallback, useState } from "react";
 import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 
@@ -30,8 +31,45 @@ const AuthForm = () => {
 
   const onSubmit: SubmitHandler<FieldValues> = (data) => {
     setIsLoading(true);
+
+    if (variant === "REGISTER") {
+      //Axios Register
+    }
+
+    if (variant === "LOGIN") {
+      //NextAuth SignIn
+    }
   };
 
-  return <div>Auth Formmm!</div>;
+  const socialAction = (action: string) => {
+    setIsLoading(true);
+    //NExtAuth Social sign In
+  };
+  return (
+    <div
+      className="
+  mt -8
+  sm:mx-auto
+  sm:w-full
+  sm:mx-w-md"
+    >
+      <div
+        className="bg-white
+        px-4
+        py-8
+        shadow
+        sm-rounded-lg
+        sm:px-10"
+      >
+        <form
+          className="space-y-6
+          "
+          onSubmit={handleSubmit(onSubmit)}
+        >
+          <Input label="Email" />
+        </form>
+      </div>
+    </div>
+  );
 };
 export default AuthForm;
