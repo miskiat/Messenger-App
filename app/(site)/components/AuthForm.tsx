@@ -66,7 +66,14 @@ const AuthForm = () => {
           "
           onSubmit={handleSubmit(onSubmit)}
         >
-          <Input label="Email" />
+          {variant === "REGISTER" && (
+            <Input
+              id="email"
+              label="Email"
+              register={register}
+              errors={errors}
+            />
+          )}
         </form>
       </div>
     </div>
