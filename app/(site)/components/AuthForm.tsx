@@ -1,8 +1,10 @@
 "use client";
 
-import Input from "@/app/components/Input";
 import { useCallback, useState } from "react";
 import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
+
+import Input from "@/app/components/inputs/Input";
+import Button from "@/app/components/inputs/Button";
 
 type Variant = "LOGIN" | "REGISTER";
 const AuthForm = () => {
