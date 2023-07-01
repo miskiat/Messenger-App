@@ -13,7 +13,15 @@ interface ButtonProps {
   disabled?: boolean;
 }
 
-const Button = () => {
+const Button: React.FC<ButtonProps> = ({
+  type,
+  fullWidth,
+  children,
+  onClick,
+  secondary,
+  danger,
+  disabled,
+}) => {
   return <div>Hello Button</div>;
 };
 export default Button;
