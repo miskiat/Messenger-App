@@ -22,6 +22,20 @@ const Button: React.FC<ButtonProps> = ({
   danger,
   disabled,
 }) => {
-  return <div>Hello Button</div>;
+  return (
+    <button
+      onClick={onClick}
+      type={type}
+      disabled={disabled}
+      className={clsx(`flex
+      justify-center
+      rounded-md
+      px-3
+      py-2
+      text-sm
+      font-semibold
+      `)}
+    ></button>
+  );
 };
 export default Button;
