@@ -125,9 +125,26 @@ const AuthForm = () => {
             />
             <AuthSocialButton
               icon={BsGoogle}
-              onClick={() => socialAction("github")}
+              onClick={() => socialAction("google")}
             />
           </div>
+        </div>
+        <div
+          className="
+        flex
+        gap-2
+        justify-center
+        text-sm
+        mt-6
+        px-2
+        text-gray-500
+        "
+        >
+          <div>{variant === "LOGIN" ? "New to Messenger?" : "Alr"}</div>
+          <div
+            onClick={toggleVariant}
+            className="underline cursor-pointer"
+          ></div>
         </div>
       </div>
     </div>
