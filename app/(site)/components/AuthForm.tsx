@@ -70,7 +70,13 @@ const AuthForm = () => {
           onSubmit={handleSubmit(onSubmit)}
         >
           {variant === "REGISTER" && (
-            <Input id="name" label="Name" register={register} errors={errors} />
+            <Input
+              id="name"
+              label="Name"
+              register={register}
+              errors={errors}
+              disabled={isLoading}
+            />
           )}
           <Input
             id="emaill"
@@ -87,7 +93,9 @@ const AuthForm = () => {
             errors={errors}
           />
           <div>
-            <Button>{variant === "LOGIN" ? "Sign in" : "Register"}</Button>
+            <Button disabled={isLoading} fullWidth type="submit">
+              {variant === "LOGIN" ? "Sign in" : "Register"}
+            </Button>
           </div>
         </form>
         <div className="mt-6">
