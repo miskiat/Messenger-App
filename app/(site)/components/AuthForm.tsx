@@ -79,7 +79,7 @@ const AuthForm = () => {
             />
           )}
           <Input
-            id="emaill"
+            id="email"
             label="Email address"
             type="email"
             register={register}
