@@ -107,7 +107,7 @@ const AuthForm = () => {
               flex
               items-center"
             >
-              <div className="w-full border-t border-gray-300" />
+              <div className="w-full border-t border-gray-400" />
             </div>
             <div
               className="
@@ -120,7 +120,7 @@ const AuthForm = () => {
                 className="
                 bg-white
                 px-2
-                text-gray-500"
+                text-gray-600"
               >
                 Or continue with
               </span>
